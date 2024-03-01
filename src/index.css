@@ -1,0 +1,62 @@
+body {
+  padding-left: 100px;
+}
+
+.board {
+  margin: 20px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(9, 50px);
+  gap: 1px;
+}
+
+.new-game {
+  display: inline;
+  margin-left: 30px;
+}
+
+.tile {
+  border: 1px solid #999;
+  text-align: center;
+  border-radius: 5px;
+
+  line-height: 50px;
+}
+
+.selected {
+  background: blue;
+}
+
+.selected input {
+  background: #fff;
+}
+
+.highlighted {
+  background: aqua;
+}
+
+.section {
+  background: skyblue;
+}
+
+input {
+  border: none;
+  background: none;
+  width: 2em;
+  text-align: center;
+  max-height: 30px;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
