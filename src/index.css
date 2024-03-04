@@ -3,7 +3,7 @@ body {
 }
 
 .board {
-  margin: 20px 0px;
+  margin: 20px 0;
 
   display: grid;
   grid-template-columns: repeat(9, 50px);

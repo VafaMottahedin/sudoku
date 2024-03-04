@@ -8,7 +8,6 @@ interface Props {
 
 const GameBoard = ({ spaces, setSpaces }: Props) => {
   const handleSetValue = (index: number, value: number) => {
-    // console.log(`setting index ${index} to value ${value}`);
     const updatedSpaces = [...spaces];
     updatedSpaces[index] = { ...updatedSpaces[index], value: value };
 
@@ -16,7 +15,6 @@ const GameBoard = ({ spaces, setSpaces }: Props) => {
   };
 
   const handleSetIsSelected = (index: number, isSelected: boolean) => {
-    // console.log(`isSelected: ${isSelected} index: ${index}`);
     const updatedSpaces = [...spaces];
 
     // Selected element

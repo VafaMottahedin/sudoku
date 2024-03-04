@@ -1,3 +1,5 @@
+import { BLANK_TILE_VAL } from '../Constants';
+
 interface Props {
   value: number;
   answer: number;
@@ -22,11 +24,10 @@ const Tile = ({
 }: Props) => {
   const handleChange = (newVal: string) => {
     if (newVal === '') {
-      onSetValue(Number(-1));
+      onSetValue(Number(BLANK_TILE_VAL));
       return;
     }
     let convertedVal = Number(newVal);
-    // console.log(`new val: ${convertedVal}`);
     if (
       !isNaN(convertedVal) &&
       [1, 2, 3, 4, 5, 6, 7, 8, 9].includes(convertedVal) &&
@@ -58,8 +59,9 @@ const Tile = ({
         type="number"
         min="1"
         max="9"
-        value={value !== -1 ? value : ''}
+        value={value !== BLANK_TILE_VAL ? value : ''}
         onChange={(e) => handleChange(e.target.value)}
+        readOnly={value === answer}
       />
     </div>
   );
